@@ -14,6 +14,9 @@ use JohnnyHuy\Laravel\Block\Renderer\TextAlignmentRenderer;
 use JohnnyHuy\Laravel\Inline\Element\YouTube;
 use JohnnyHuy\Laravel\Inline\Parser\YouTubeParser;
 use JohnnyHuy\Laravel\Inline\Renderer\YouTubeRenderer;
+use JohnnyHuy\Laravel\Inline\Element\Vimeo;
+use JohnnyHuy\Laravel\Inline\Parser\VimeoParser;
+use JohnnyHuy\Laravel\Inline\Renderer\VimeoRenderer;
 use JohnnyHuy\Laravel\Inline\Element\SoundCloud;
 use JohnnyHuy\Laravel\Inline\Parser\SoundCloudParser;
 use JohnnyHuy\Laravel\Inline\Renderer\SoundCloudRenderer;
@@ -63,6 +66,7 @@ class UsefulCommonMarkExtension extends Extension
             $container->make(GistParser::class),
             $container->make(CodepenParser::class),
             $container->make(YouTubeParser::class),
+            $container->make(Vimeo::class),
             $container->make(SoundCloudParser::class),
         ];
 
@@ -70,6 +74,7 @@ class UsefulCommonMarkExtension extends Extension
             Gist::class => $container->make(GistRenderer::class),
             Codepen::class => $container->make(CodepenRenderer::class),
             YouTube::class => $container->make(YouTubeRenderer::class),
+            Vimeo::class => $container->make(VimeoRenderer::class),
             SoundCloud::class => $container->make(SoundCloudRenderer::class),
         ];
 

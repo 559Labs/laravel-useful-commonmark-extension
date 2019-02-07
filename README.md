@@ -21,6 +21,7 @@ A Laravel PHP Composer packaged of useful CommonMark extensions for The PHP Leag
       - [Codepen](#codepen)
       - [SoundCloud](#soundcloud)
       - [YouTube](#youtube)
+      - [Vimeo](#vimeo)
       - [Color](#color)
       - [Text Alignment](#text-alignment)
   - [Contribution](#contribution)
@@ -112,6 +113,14 @@ I've composed a wiki page to describe features of this extension.
 ```
 
 [More info](https://github.com/johnnyhuy/laravel-useful-commonmark-extension/wiki/YouTube)
+
+#### Vimeo
+
+```markdown
+:vimeo https://vimeo.com/152779982
+```
+
+[More info](https://github.com/johnnyhuy/laravel-useful-commonmark-extension/wiki/Vimeo)
 
 #### Color
 
