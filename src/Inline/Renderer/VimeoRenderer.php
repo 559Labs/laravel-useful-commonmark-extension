@@ -26,21 +26,24 @@ class VimeoRenderer implements InlineRendererInterface, ConfigurationAwareInterf
      */
     public function render(AbstractInline $inline, ElementRendererInterface $htmlRenderer)
     {
-        if (!($inline instanceof YouTube)) {
+        if (!($inline instanceof Vimeo)) {
             throw new \InvalidArgumentException('Incompatible inline type: ' . get_class($inline));
         }
 
-        //create a new iframe with the given youtube url
-        $iframe = new HtmlElement('iframe', [
-            'width' => 640,
-            'height' => 360,
-            'src' => $inline->getUrl(),
-            'webkitallowfullscreen' => true,
-            'mozallowfullscreen' => true,
-            'allowfullscreen' => true,
-            'type' => "text/html",
-            'frameborder' => 0,
-        ]);
+        //create a new iframe with the given Vimeo url
+        $iframe = new HtmlElement(
+            'iframe', 
+            [
+                'width' => 640,
+                'height' => 360,
+                'src' => $inline->getUrl(),
+                'webkitallowfullscreen' => true,
+                'mozallowfullscreen' => true,
+                'allowfullscreen' => true,
+                'type' => "text/html",
+                'frameborder' => 0,
+            ]
+        );
 
         //return the iframe with a span as wrapper element
         return new HtmlElement('span', ['class' => 'vimeo-video'], $iframe);
