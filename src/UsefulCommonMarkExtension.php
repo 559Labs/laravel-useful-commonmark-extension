@@ -66,7 +66,7 @@ class UsefulCommonMarkExtension extends Extension
             $container->make(GistParser::class),
             $container->make(CodepenParser::class),
             $container->make(YouTubeParser::class),
-            $container->make(Vimeo::class),
+            $container->make(VimeoParser::class),
             $container->make(SoundCloudParser::class),
         ];
 
